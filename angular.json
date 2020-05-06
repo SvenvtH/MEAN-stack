@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MEAN-examen"
+    }
+  },
+  "defaultProject": "MEAN-examen",
+  "cli": {
+    "analytics": "64d67309-bd6e-4624-b09d-fad8f18dd2c1"
+  }
 }

@@ -1,6 +1,7 @@
 {
   "name": "mean-examen",
   "version": "0.0.0",
+  "main": "backend/server.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,9 +17,17 @@
     "@angular/compiler": "~9.1.4",
     "@angular/core": "~9.1.4",
     "@angular/forms": "~9.1.4",
+    "@angular/localize": "~9.1.4",
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "@fortawesome/angular-fontawesome": "^0.6.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "bootstrap": "^4.4.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
