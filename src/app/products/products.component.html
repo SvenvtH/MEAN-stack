@@ -1,1 +1,24 @@
-<p>products works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <p>Sorteer:</p>
+      <button (click)="getProducts('name')" >Omschrijving</button><br>
+      <button (click)="getProducts('productId')" >Productnummer</button>
+    </div>
+    <div class="col-8">
+      <div *ngIf="product$ | async; let product">
+        <div class="card-deck">
+          <div class="card" *ngFor="let product of product">
+            <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">€{{product.price/100}}</p>
+              <p class="card-text"><small class="text-muted">ID: {{product.productId}}</small></p>
+              <a [routerLink]="['../product/', product.productId]" class="btn btn-primary">Bestel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

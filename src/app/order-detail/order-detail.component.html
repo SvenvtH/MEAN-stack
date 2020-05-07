@@ -1,1 +1,15 @@
-<p>order-detail works!</p>
+<div *ngIf="orderInfo$ | async; let order">
+  <a>ID: {{order.orderId}}</a><br>
+  <a>Datum: {{order.orderDate | date:"dd/MM/yy"}}</a><br>
+  <a>Klant: {{order.customerName}}</a><br>
+  <a>Shipping: {{order.shippingStreet}} {{order.shippingNumber}}, {{order.shippingPostalCode}}
+    ,{{order.shippingCity}}</a><br>
+  <a>Status: {{order.status}}</a><br>
+  <a><select id="statusBox" onchange="changeOrderDetail('this')">
+    <option value="">Select nieuwe status</option>
+    <option value="In Behandeling">In behandeling</option>
+    <option value="Verzonden">Verzonden</option>
+    <option value="Bezorgd">Bezorgd</option>
+  </select></a>
+  <!-- <button (click)="addCartItem(product.productId)">Bestel</button> -->
+</div>

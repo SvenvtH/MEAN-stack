@@ -1,1 +1,9 @@
-<p>product-detail works!</p>
+<a>Loaded</a>
+<div *ngIf="productInfo$ | async; let product">
+  <a>Naam: {{product.name}}</a><br>
+  <a>ID: {{product.productId}}</a><br>
+  <a>Prijs per stuk: €{{product.price/100}}</a><br>
+  <img src="{{product.img}}" alt="">
+  <!-- <button (click)="addCartItem(product.productId)">Bestel</button> -->
+</div>
+

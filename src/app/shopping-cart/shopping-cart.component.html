@@ -1,1 +1,32 @@
-<p>shopping-cart works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div *ngIf="cart$ | async; let cart;">
+        <ul>
+            <table class="table">
+              <thead>
+                <th scope="col">Productnaam:</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Prijs</th>
+                <th scope="col"></th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of cart.products">
+                    <th scope="row">{{product.name}}</th>
+                    <td></td>
+                    <td></td>
+                    <td>{{product.count}} x €{{product.price/100}}</td>
+                    <td>€{{product.count*product.price/100}}</td>
+                    <td><button (click)="deleteCartItem(product.productId)">Verwijder</button></td>
+                </tr>
+              </tbody>
+            </table>
+        </ul>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
+</div>

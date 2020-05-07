@@ -1,0 +1,28 @@
+<a>Sorteer op: <button (click)="getOrders('orderDate')">Datum</button> <button (click)="getOrders('status')">Order
+    Status</button></a>
+<div *ngIf="order$ | async; let order">
+  <ul>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">OrderId</th>
+          <th scope="col">Name</th>
+          <th scope="col">OrderDate</th>
+          <th scope="col">OrderPrice</th>
+          <th scope="col">OrderStatus</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of order">
+          <th scope="row">{{order.orderId}}</th>
+          <td>{{order.customerName}}</td>
+          <td>{{order.orderDate | date:"dd/MM/yy"}}</td>
+          <td></td>
+          <td>{{order.status}}</td>
+          <td><a [routerLink]="['/order/', order.orderId]">Bewerk</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </ul>
+</div>
