@@ -10,7 +10,7 @@ const body_parser = require("body-parser");
 server.use(body_parser.json());
 server.use(cors())
 
-const port = 4000;
+const port = procces.env.PORT || 4000;
 
 // << db setup >>
 const db = require("./db");
