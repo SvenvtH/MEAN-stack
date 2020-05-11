@@ -2,7 +2,7 @@
 <div *ngIf="productInfo$ | async; let product">
   <a>Naam: {{product.name}}</a><br>
   <a>ID: {{product.productId}}</a><br>
-  <a>Prijs per stuk: €{{product.price/100}}</a><br>
+  <a>Prijs per stuk: {{product.price/100 | currency:'EUR'}}</a><br>
   <img src="{{product.img}}" alt="">
   <!-- <button (click)="addCartItem(product.productId)">Bestel</button> -->
 </div>

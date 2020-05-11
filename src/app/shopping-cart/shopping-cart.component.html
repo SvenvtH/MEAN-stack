@@ -17,8 +17,8 @@
                     <th scope="row">{{product.name}}</th>
                     <td></td>
                     <td></td>
-                    <td>{{product.count}} x €{{product.price/100}}</td>
-                    <td>€{{product.count*product.price/100}}</td>
+                    <td>{{product.count}} x {{product.price/100 | currency:'EUR'}}</td>
+                    <td>{{product.count*product.price/100 | currency:'EUR'}}</td>
                     <td><button (click)="deleteCartItem(product.productId)">Verwijder</button></td>
                 </tr>
               </tbody>
