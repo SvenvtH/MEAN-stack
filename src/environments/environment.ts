@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://sven-mean.azurewebsites.net'
+  api: 'https://api-sven.azurewebsites.net'
 };
 
 /*
