@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'https://api-sven.azurewebsites.net'
+  api: 'https://sven-hoenderdaal.oa.r.appspot.com'
 };
 
 /*

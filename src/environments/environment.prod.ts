@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://api-sven.azurewebsites.net'
+  api: 'https://sven-hoenderdaal.oa.r.appspot.com'
 };
