@@ -11,7 +11,7 @@ export class ShoppingCartComponent implements OnInit {
   cart$: Observable<any>;
 
   constructor(
-    private cart: CartService
+    private cart: CartService,
   ) { }
 
   ngOnInit(): void {

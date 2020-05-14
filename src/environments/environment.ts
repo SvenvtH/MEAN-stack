@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'https://sven-hoenderdaal.oa.r.appspot.com'
+  api: 'http://localhost:4000'
 };
 
 /*
