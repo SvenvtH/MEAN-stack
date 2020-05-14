@@ -1,6 +1,7 @@
 <div *ngIf="orderInfo$ | async; let order">
   <a>ID: {{order.orderId}}</a><br>
   <a>Datum: {{order.orderDate | date:"dd/MM/yy"}}</a><br>
+  <a>Totaal prijs: {{order.orderPrice/100 | currency:"EUR"}}</a><br>
   <a>Klant: {{order.customerName}}</a><br>
   <a>Shipping: {{order.shippingStreet}} {{order.shippingNumber}}, {{order.shippingPostalCode}}
     ,{{order.shippingCity}}</a><br>

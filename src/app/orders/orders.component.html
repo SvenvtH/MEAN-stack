@@ -18,7 +18,7 @@
           <th scope="row">{{order.orderId}}</th>
           <td>{{order.customerName}}</td>
           <td>{{order.orderDate | date:"dd/MM/yy"}}</td>
-          <td></td>
+          <td>{{order.orderPrice/100 | currency:"EUR"}}</td>
           <td>{{order.status}}</td>
           <td><a [routerLink]="['/order/', order.orderId]">Bewerk</a></td>
         </tr>
